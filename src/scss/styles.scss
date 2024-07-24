@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap');
+
+// === Mixin ===
+@mixin roboto  {
+    font-family: 'Roboto', sans-serif;
+}
+
+@mixin quicksand {
+    font-family: 'Quicksand', sans-serif;
+}
+// === Mixin ===
+
+// === Viriables ===
+$base: 4px;
+
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-bold: 700;
+
+$padding-vertical-xs: $base * 5;
+$padding-vertical-sm: $base * 15;
+$padding-vertical: $base * 30;
+
+$color-divide: #d8e3fe;
+
+$transition: .2s;
+
+// === VIRAIBLES ===
+
+// === COMMON ===
+
+body {
+    @include roboto;
+
+}
+
+.section-outer {
+    border-bottom: 1px solid $color-divide;
+}
+
+.section-inner{
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: $padding-vertical;
+    padding-bottom:$padding-vertical;
+    
+    &--wide {
+        max-width: 1200px;
+    }
+}
+
+
+.btn {
+    @include quicksand;
+
+    padding: $base*3 $base*4;
+    margin: 0;
+    font-weight: $fw-bold; 
+    font-size: 13px;
+    background-color: none;
+    border: 0;
+    border-radius: 2px;
+
+
+
+    &--primary {
+        background-color: #d2e1d2;
+    }
+}
+// === / COMMON ===
+
+// === HEADER ===
+.section-header {
+    .section-inner {
+        padding-top: $padding-vertical-xs;
+        padding-bottom: $padding-vertical-xs;
+    }
+}
+
+.main-navigation {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: $base * 6;
+    height: $base * 6;
+    background-color:#5E81FE;
+    border-radius: 100%;
+}
+
+.nav {
+    margin-left: $base * 18;
+}
+
+.nav-wrapper {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    
+    &__item {
+        &+& {
+            margin-left: $base * 10;
+        }
+
+        &-link {
+            @include quicksand;
+
+            font-size: 12px;
+            font-weight: $fw-medium;
+            color: #a66994;
+            text-decoration: none;
+            transition: $transition;
+
+            &:hover {
+                color: #5e81fe;
+            }
+            
+            &--active {
+                font-weight: $fw-bold;
+                color: #5e81fe;
+
+            }
+        }
+    }
+}
+
+.socials {
+  margin-left: auto;
+
+
+}
+
+.socials-wrapper {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    
+
+    
+    &__item {
+        & + & {
+            margin-left: $base * 10;
+        }
+
+        &-link {    
+            path {
+                fill: #B6BAC7;
+                transition: $transition;
+            }
+    
+            &:hover {
+                 path {
+                     fill: #6188ff;
+                 }
+            }
+        }
+    }   
+
+}
+// === / HEADER ===
+
+// === HERO-IMAGE ===
+.section-hero-image {
+    background-color: #f4f7ff;
+}
+// === / HERO-IMAGE === 
+
+// === CUSTOMERS ===
+.section-customers {
+    .section-inner{
+        padding-top: $padding-vertical-sm;
+        padding-bottom: $padding-vertical-sm;
+    } 
+}     
+// === / CUSTOMERS ===
+
+// === PLAN-AND-MANEGE ===
+.section-plan-and-manage {
+    background-color: #F5F8FF;
+}
+// === / PLAN-AND-MANEGE ===
+
+// === FEATURES ===
+.section-features {}   
+// === / FEATURES ===
+
+// === STATS ===
+.section-stats {
+    background-color: #E9EFFF;
+    .section-inner{
+        padding-top: $padding-vertical-sm;
+        padding-bottom: $padding-vertical-sm;
+    }      
+}      
+// === / STATS === 
+
+// === BLOG ===
+.section-blog {
+    
+}       
+// === / BLOG ===
+
+// === QUOTES ===
+.section-quotes {
+    background-color: #eaf0ff;
+}
+// === / QUOTES === 
+
+// === FAQ  ===
+.section-faq {
+
+}
+// === / FAQ  ===
+
+// === GET-STARTED ===
+.section-get-started {
+    background-color: #6888ff;
+}
+// === / GET-STARTED === 
+
+// === NEWSLETTER ===
+.section-newsletter {
+    background-color: #fcfdff;
+}
+
+// === / NEWSLETTER ===
+
+// === FOOTER ===
+.section-footer {
+    border-bottom: 0;
+    .section-inner{
+        padding-top: $padding-vertical-sm;
+        padding-bottom: $padding-vertical-sm;
+    }      
+}
+// === / FOOTER ===
